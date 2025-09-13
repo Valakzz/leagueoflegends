@@ -16,6 +16,6 @@ class Adversarios {
             "Ekko",
             "Morgana"
         )
-        val vida: Int = 100
+        var vidaInimigo: Int = 100
     }
 }

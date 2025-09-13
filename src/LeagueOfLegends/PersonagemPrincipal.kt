@@ -10,7 +10,7 @@ class PersonagemPrincipal(
         val personagemEscolhido = readln().lowercase()
         if (personagemEscolhido == "sim"){
             Adversarios.inimigoEsc =  Adversarios.campeoes.random()
-            println("O personagem que entrou na arena é ${Adversarios.inimigoEsc} e a vida dele é ${Adversarios.vida}")
+            println("O personagem que entrou na arena é ${Adversarios.inimigoEsc} e a vida dele é ${Adversarios.vidaInimigo}")
         }else{
             println("Nenhum inimigo Entrou na arena ainda")
         }
@@ -32,11 +32,27 @@ class PersonagemPrincipal(
 
     }
 
+
+
     fun mostrarPersonagem(){
+        if(Adversarios.inimigoEsc == null){
+            println("Voce não escolheu um inimigo ainda")
+        }else{
         println("================================================================")
         println(" Olá, seu personagem escolhido é ${nome} e a vida é ${vida}.")
         println("================================================================")
     }
 
 
+}
+    fun mostrarPersonagemInimigo(){
+        if(Adversarios.inimigoEsc == null){
+            println("Voce não escolheu um inimigo ainda")
+        }else{
+            println("================================================================")
+            println(" Olá, seu personagem escolhido é ${Adversarios.inimigoEsc} e a vida é ${Adversarios.vidaInimigo}.")
+            println("================================================================")
+        }
+
+    }
 }
