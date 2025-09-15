@@ -5,7 +5,6 @@ fun main() {
 
 
     val personagem = PersonagemPrincipal()
-    val mostrarP = Adversarios
     val inimigos = PersonagemPrincipal()
     val ataquezi = Ataque()
 
