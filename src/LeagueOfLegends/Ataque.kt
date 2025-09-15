@@ -7,12 +7,17 @@ class Ataque() {
 
 
 
+
     fun AtaqueAdv(){
 
 
 
             do {
 
+                 if(Adversarios.inimigoEsc == null){
+                        println("Voce não escolheu um inimigo ainda")
+                     break
+                 }
                 println("Essas são suas skills Disponiveis: Q,W,E,R")
                 val skilEscolhida = readln().lowercase()
                 val dano = valoresskill.random()
@@ -39,11 +44,16 @@ class Ataque() {
                  }
                 if (Adversarios.vidaInimigo <= 0 ){
                     Adversarios.vidaInimigo = 0
+                    println("==================================================")
                     println("Você derrotou o inimigo ${Adversarios.inimigoEsc}")
+                    println("==================================================")
                     break
                 }
             }while(skilEscolhida != "sair")
-            println("Você saiu da batalha")
+        println("Você saiu da batalha")
+        Adversarios.sempersonagem()
+        Adversarios.vidaInimigo = 100
+
     }}
 
 

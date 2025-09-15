@@ -1,19 +1,21 @@
 package LeagueOfLegends
 
-class PersonagemPrincipal(
-    var nome: String = "",
+class PersonagemPrincipal{
+    var nome: String = ""
     var vida: Int = 100
-) {
+            private set
+
 
     fun PersonagemAdiversario(){
         println("Gostaria de adicionar um personagem Digite: Sim")
         val personagemEscolhido = readln().lowercase()
         if (personagemEscolhido == "sim"){
-            Adversarios.inimigoEsc =  Adversarios.campeoes.random()
+            Adversarios.chamarpersonage()
             println("O personagem que entrou na arena é ${Adversarios.inimigoEsc} e a vida dele é ${Adversarios.vidaInimigo}")
         }else{
             println("Nenhum inimigo Entrou na arena ainda")
         }
+
     }
 
     fun personagemIscolhido(){
