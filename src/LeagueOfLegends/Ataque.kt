@@ -1,17 +1,8 @@
 package LeagueOfLegends
-
-
-
 class Ataque() {
     val valoresskill = mutableListOf(5,10,35,40,2,5)
 
-
-
-
     fun AtaqueAdv(){
-
-
-
             do {
 
                  if(Adversarios.inimigoEsc == null){
@@ -42,8 +33,7 @@ class Ataque() {
                      println("Você causou $dano na ${Adversarios.inimigoEsc}")
                      println("Vida restante do adiversario: ${Adversarios.vidaInimigo}")
                  }
-                if (Adversarios.vidaInimigo <= 0 ){
-                    Adversarios.vidaInimigo = 0
+                if (Adversarios.vidaInimigo == 0 ){
                     println("==================================================")
                     println("Você derrotou o inimigo ${Adversarios.inimigoEsc}")
                     println("==================================================")
@@ -53,7 +43,7 @@ class Ataque() {
         println("Você saiu da batalha")
         Adversarios.sempersonagem()
         Adversarios.vidaInimigo = 100
-
-    }}
+    }
+}
 
 
