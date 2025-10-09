@@ -1,4 +1,4 @@
-package LeagueOfLegends
+package JogoTrigrinho.LeagueOfLegends
 
 class Adversarios {
 

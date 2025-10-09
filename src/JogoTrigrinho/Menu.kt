@@ -1,5 +1,7 @@
 package JogoTrigrinho
 
+import JogoTrigrinho.LeagueOfLegends.painel
+
 fun main() {
 
     val simbolos = listOf("🍒", "🍋", "🍇", "🔔", "⭐", "💎")
@@ -38,8 +40,9 @@ class MenuPrincipal(  val simbolos: List<String>) {
             println(" --- Bem vindo ao cassino dos baianos \uD83C\uDDEA\uD83C\uDDE8 --- ")
             println("1. Digite o valor que deseja depositar ");
             println("2. Minigame Tigrinho \uD83C\uDF40 ");
-            println("3. Minigame Pedra, Papel Tesoura ");
+            println("3. Minigame Pedra, Papel, Tesoura ");
             println("4. Gostaria de Olhar seu Deposito ")
+            println("5. Minigame LeagueOfLegends ")
 
             println("0. Sair \uD83D\uDC38");
             print("Digite uma opcao: \uD83D\uDC40 ");
@@ -54,6 +57,7 @@ class MenuPrincipal(  val simbolos: List<String>) {
                 2 -> Simboloscassino()
                 3 -> gamepapel.JogarPapelPedraTesoura()
                 4 -> println("Olá seu valor depositado é ${MinigameTigrinho.valores}")
+                5 -> painel().PainelPrincipal()
             }
         }while (opcao != 0)
     }

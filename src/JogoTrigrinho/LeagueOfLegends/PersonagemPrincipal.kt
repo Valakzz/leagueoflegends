@@ -1,4 +1,4 @@
-package LeagueOfLegends
+package JogoTrigrinho.LeagueOfLegends
 
 class PersonagemPrincipal{
     var nome: String = ""
