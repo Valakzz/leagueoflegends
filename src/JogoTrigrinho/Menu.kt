@@ -3,20 +3,15 @@ package JogoTrigrinho
 import JogoTrigrinho.LeagueOfLegends.painel
 
 fun main() {
-
     val simbolos = listOf("🍒", "🍋", "🍇", "🔔", "⭐", "💎")
     val tigrinho = MenuPrincipal( simbolos)
     tigrinho.TelaPrincipal()
-
-
 }
 class MenuPrincipal(  val simbolos: List<String>) {
     var gamepapel = MinigamePapelPedraTesoura()
     fun Simboloscassino(){
-        var deposit = MinigameTigrinho()
-
         if (MinigameTigrinho.valores <= 0){
-            println("Você não depositou um valor valido")
+            Informacoes.valorindevido
         }else{
             val  primeirosimbolo = simbolos.random()
             val  Segundosimbolo = simbolos.random()
@@ -43,6 +38,7 @@ class MenuPrincipal(  val simbolos: List<String>) {
             println("3. Minigame Pedra, Papel, Tesoura ");
             println("4. Gostaria de Olhar seu Deposito ")
             println("5. Minigame LeagueOfLegends ")
+            println("6. Gastar tudo no dado")
 
             println("0. Sair \uD83D\uDC38");
             print("Digite uma opcao: \uD83D\uDC40 ");
