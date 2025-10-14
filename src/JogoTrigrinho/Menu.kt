@@ -1,31 +1,17 @@
 package JogoTrigrinho
 
+import JogoTrigrinho.JogoTrigri.Tigri
 import JogoTrigrinho.LeagueOfLegends.painel
 
 fun main() {
-    val simbolos = listOf("🍒", "🍋", "🍇", "🔔", "⭐", "💎")
-    val tigrinho = MenuPrincipal( simbolos)
+    val tigrinho = MenuPrincipal()
+
     tigrinho.TelaPrincipal()
 }
-class MenuPrincipal(  val simbolos: List<String>) {
+class MenuPrincipal() {
+    val tigi = Tigri()
     var gamepapel = MinigamePapelPedraTesoura()
-    fun Simboloscassino(){
-        if (MinigameTigrinho.valores <= 0){
-            Informacoes.valorindevido
-        }else{
-            val  primeirosimbolo = simbolos.random()
-            val  Segundosimbolo = simbolos.random()
-            val  Terceirosimbolo = simbolos.random()
-            println(" Rodada ${primeirosimbolo} : ${Segundosimbolo} : ${Terceirosimbolo}")
-            if (primeirosimbolo == Segundosimbolo && Segundosimbolo == Terceirosimbolo){
-                println("Parabéns você GANHOU parceiro \uD83D\uDC2F\uD83D\uDC2F")
-                MinigameTigrinho.valores += 5000
-            }else{
-                println("Não foi dessa vez tente novamente \uD83D\uDC38")
-                MinigameTigrinho.valores -= 50
-            }
-        }
-    }
+
 
     fun TelaPrincipal(){
         var opcao: Int
@@ -50,7 +36,7 @@ class MenuPrincipal(  val simbolos: List<String>) {
                     println("Digite o valor que deseja depositar")
                    deposit.Depositados(readln().toInt())
                 }
-                2 -> Simboloscassino()
+                2 -> tigi.Simboloscassino()
                 3 -> gamepapel.JogarPapelPedraTesoura()
                 4 -> println("Olá seu valor depositado é ${MinigameTigrinho.valores}")
                 5 -> painel().PainelPrincipal()

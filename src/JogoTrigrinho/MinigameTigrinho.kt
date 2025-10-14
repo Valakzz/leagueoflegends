@@ -6,7 +6,7 @@ package JogoTrigrinho
     }
     fun Depositados(Novovalor: Int = 0){
         if (Novovalor <= 0){
-            Informacoes.valorindevido
+            Informacoes.valorindevido()
         }else{
             valores += Novovalor
             println("Olá Usuario você Depositou $Novovalor")
