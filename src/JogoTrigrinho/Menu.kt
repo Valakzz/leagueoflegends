@@ -25,7 +25,7 @@ class MenuPrincipal() {
             println("4. Gostaria de Olhar seu Deposito ")
             println("5. Minigame LeagueOfLegends ")
             println("6. Gastar tudo no dado")
-
+             
             println("0. Sair \uD83D\uDC38");
             print("Digite uma opcao: \uD83D\uDC40 ");
             opcao = readln().toInt();

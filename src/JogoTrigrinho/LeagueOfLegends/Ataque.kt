@@ -1,6 +1,7 @@
 package JogoTrigrinho.LeagueOfLegends
 class Ataque() {
-    val valoresskill = mutableListOf(5,10,35,40,2,5)
+    var valoresskill = mutableListOf(5,10,35,40,2,5)
+        private set
 
     fun AtaqueAdv(){
             do {
