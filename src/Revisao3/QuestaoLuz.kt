@@ -1,4 +1,4 @@
-package ExerciciosHeranca
+package Revisao3
 
 open class Luz(var marca: String, var ligado: Boolean){
     fun mostrarMarca() = println("Lampada da marca $marca")
@@ -17,4 +17,5 @@ class Luminaria(marca: String, ligado: Boolean): Luz(marca, ligado){
             println("Lampada Desligada")
         }
     }
+
 }

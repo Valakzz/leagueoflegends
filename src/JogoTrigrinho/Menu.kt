@@ -1,6 +1,8 @@
 package JogoTrigrinho
 
 import JogoTrigrinho.JogoTrigri.Tigri
+import JogoTrigrinho.LeagueOfLegends.JogoDados
+import JogoTrigrinho.LeagueOfLegends.Jogododado
 import JogoTrigrinho.LeagueOfLegends.painel
 
 fun main() {
@@ -16,6 +18,7 @@ class MenuPrincipal() {
     fun TelaPrincipal(){
         var opcao: Int
         var deposit = MinigameTigrinho()
+//        var jogoddado = JogoDados()
         do {
             println("-------------------------------------------------------")
             println(" --- Bem vindo ao cassino dos baianos \uD83C\uDDEA\uD83C\uDDE8 --- ")
@@ -40,6 +43,7 @@ class MenuPrincipal() {
                 3 -> gamepapel.JogarPapelPedraTesoura()
                 4 -> println("Olá seu valor depositado é ${MinigameTigrinho.valores}")
                 5 -> painel().PainelPrincipal()
+//                6 -> jogoddado.dados()
             }
         }while (opcao != 0)
     }
